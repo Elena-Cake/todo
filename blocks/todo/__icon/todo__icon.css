@@ -1,0 +1,14 @@
+.todo__icon {
+    width: 31px;
+    height: 31px;
+    border: 0;
+    background-color: inherit;
+    background-size: 31px 31px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+.todo__icon:hover {
+    opacity: 0.5;
+}

@@ -1,0 +1,7 @@
+.todo__icons {
+    width: 120px;
+    height: 31px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}

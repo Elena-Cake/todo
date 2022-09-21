@@ -17,8 +17,7 @@
             </div>
         <template class="main__list">
             <div class="todo">
-                <h2 class="todo__text todo__text_type_h todo__text_open"></h2>
-                <input type="text" class="todo__text todo__text_type_inp">
+                <h2 class="todo__text todo__text_type_h"></h2>
                 <div class="todo__icons">
                     <button class="todo__icon todo__icon_type_btn-edit"></button>
                     <button class="todo__icon todo__icon_type_btn-copy"></button>
@@ -26,6 +25,13 @@
                 </div>
             </div>
         </template>
+    </div>
+    <div class="todo todo__popup">
+        <input type="text" class="todo__text todo__text_type_inp">
+        <div class="todo__icons todo__icons_type_popup">
+            <button class="todo__icon todo__icon_type_btn-done"></button>
+            <button class="todo__icon todo__icon_type_btn-close"></button>
+        </div>
     </div>
     <script src="./scripts/list.js"></script>
     <script src="./scripts/index.js"></script>

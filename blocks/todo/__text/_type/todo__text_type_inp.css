@@ -1,0 +1,12 @@
+.todo__text_type_inp {
+    border: 0;
+}
+
+.todo__text_type_inp:focus {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 10px 0 7px;
+    margin-bottom: 7px;
+    border-bottom: 1px solid #bcbcc4;
+    outline-color: #ffffff00;
+}

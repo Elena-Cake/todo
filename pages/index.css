@@ -13,9 +13,17 @@
 /* todo */
 @import url(../blocks/todo/todo.css);
 @import url(../blocks/todo/__text/todo__text.css);
+@import url(../blocks/todo/__text/_type/todo__text_type_inp.css);
 @import url(../blocks/todo/__text/_open/todo__text_open.css);
 @import url(../blocks/todo/__icons/todo__icons.css);
+@import url(../blocks/todo/__icons/_type/todo__icons_type_popup.css);
 @import url(../blocks/todo/__icon/todo__icon.css);
 @import url(../blocks/todo/__icon/_type/todo__icon_type_btn-copy.css);
 @import url(../blocks/todo/__icon/_type/todo__icon_type_btn-delete.css);
-@import url(../blocks/todo/__icon/_type/todo__icon_type_btn-edit\ .css);
+@import url(../blocks/todo/__icon/_type/todo__icon_type_btn-edit.css);
+
+/* popup */
+@import url(../blocks/todo/__icon/_type/todo__icon_type_btn-done.css);
+@import url(../blocks/todo/__icon/_type/todo__icon_type_btn-close.css);
+@import url(../blocks/todo/__popup/todo__popup.css);
+@import url(../blocks/todo/__popup/_open/todo__popup_open.css);

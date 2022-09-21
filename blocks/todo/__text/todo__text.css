@@ -1,11 +1,8 @@
 .todo__text {
     text-align: left;
-    min-width: 50%;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    display: none;
-    border: 0;
     margin: 0;
     padding: 15px 0;
 }

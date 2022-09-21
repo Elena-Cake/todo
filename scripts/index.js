@@ -5,20 +5,18 @@ const buttonSend = document.querySelector('.main__btn-send')
 // todo
 const todoListContainer = document.querySelector('.main__todo-list')
 
+// const todoEditInput = todoElement.querySelector('.todo__text_type_inp')
+
 
 // add todo function
 function createTodo (text) {
-    const todoTemplate = document.querySelector('.main__list').content;;
-    const todoElement = todoTemplate.querySelector('.todo').cloneNode(true);;
-    console.log(todoElement);
+    const todoTemplate = document.querySelector('.main__list').content;
+    const todoElement = todoTemplate.querySelector('.todo').cloneNode(true);
     todoElement.querySelector('.todo__text').textContent = text;
 
     // edit
     todoElement.querySelector('.todo__icon_type_btn-edit').addEventListener('click',() =>{
-      todoElement.querySelector('.todo__text_type_h').classList.toggle('todo__text_open');
-      todoElement.querySelector('.todo__text_type_inp').classList.toggle('todo__text_open');
-      todoElement.querySelector('.todo__text_type_inp').value = text;
-      todoElement.querySelector('.todo__text_type_inp').focus();
+      
     } )
 
     // copy

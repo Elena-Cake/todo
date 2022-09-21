@@ -1,5 +1,6 @@
 .todo__text_type_inp {
     border: 0;
+    width: 80%;
 }
 
 .todo__text_type_inp:focus {

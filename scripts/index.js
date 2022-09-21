@@ -1,11 +1,15 @@
 // form
-const inputToDo = document.querySelector('.main__input')
-const buttonSend = document.querySelector('.main__btn-send')
+const inputToDo = document.querySelector('.main__input');
+const buttonSend = document.querySelector('.main__btn-send');
 
 // todo
-const todoListContainer = document.querySelector('.main__todo-list')
+const todoListContainer = document.querySelector('.main__todo-list');
 
-// const todoEditInput = todoElement.querySelector('.todo__text_type_inp')
+// popup
+const popup = document.querySelector('.todo__popup');
+const popupInput = popup.querySelector('.todo__text_type_inp');
+const popupDoneBtn = popup.querySelector('.todo__icon_type_btn-done');
+const popupCloseBtn = popup.querySelector('.todo__icon_type_btn-close');
 
 
 // add todo function
@@ -16,7 +20,8 @@ function createTodo (text) {
 
     // edit
     todoElement.querySelector('.todo__icon_type_btn-edit').addEventListener('click',() =>{
-      
+      popup.classList.add('todo__popup_open')
+      popupInput.value = text;
     } )
 
     // copy
@@ -54,3 +59,8 @@ function addElementInContainer(element,container) {
       addElementInContainer(todo , todoListContainer)
     }
   }
+
+  // закрытие попапа
+  popupCloseBtn.addEventListener('click', () => {
+    popup.classList.remove('todo__popup_open')
+  })

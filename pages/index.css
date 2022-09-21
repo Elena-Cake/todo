@@ -13,6 +13,7 @@
 /* todo */
 @import url(../blocks/todo/todo.css);
 @import url(../blocks/todo/__text/todo__text.css);
+@import url(../blocks/todo/__text/_open/todo__text_open.css);
 @import url(../blocks/todo/__icons/todo__icons.css);
 @import url(../blocks/todo/__icon/todo__icon.css);
 @import url(../blocks/todo/__icon/_type/todo__icon_type_btn-copy.css);

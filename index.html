@@ -10,14 +10,15 @@
             <h1 class="main__title">Список дел</h1>
             <form class="main__form">
                 <input type="text" class="main__input">
-                <button class="main__btn-send">Отправить</button>
+                <button class="main__btn-send" type="submit">Отправить</button>
             </form>
             <div class="main__todo-list">    
                 
             </div>
         <template class="main__list">
             <div class="todo">
-                <h2 class="todo__text"></h2>
+                <h2 class="todo__text todo__text_type_h todo__text_open"></h2>
+                <input type="text" class="todo__text todo__text_type_inp">
                 <div class="todo__icons">
                     <button class="todo__icon todo__icon_type_btn-edit"></button>
                     <button class="todo__icon todo__icon_type_btn-copy"></button>

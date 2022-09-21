@@ -14,10 +14,24 @@ function createTodo (text) {
     todoElement.querySelector('.todo__text').textContent = text;
 
     // edit
+    todoElement.querySelector('.todo__icon_type_btn-edit').addEventListener('click',() =>{
+      todoElement.querySelector('.todo__text_type_h').classList.toggle('todo__text_open');
+      todoElement.querySelector('.todo__text_type_inp').classList.toggle('todo__text_open');
+      todoElement.querySelector('.todo__text_type_inp').value = text;
+      todoElement.querySelector('.todo__text_type_inp').focus();
+    } )
 
     // copy
+    todoElement.querySelector('.todo__icon_type_btn-copy').addEventListener('click',() =>{
+      const todo = createTodo(text);
+      addElementInContainer(todo , todoListContainer);
+    } )
 
     // delete
+    todoElement.querySelector('.todo__icon_type_btn-delete').addEventListener('click',() =>{
+      todoElement.closest('.todo').remove()
+    } )
+
 return todoElement
 }
 
@@ -32,3 +46,13 @@ function addElementInContainer(element,container) {
     addElementInContainer(todo , todoListContainer)
   });
 
+  // добавление из инпута
+  buttonSend.addEventListener('click', submitHandler)
+
+  function submitHandler (event) {
+    event.preventDefault();
+    if (inputToDo.value !== '') {
+      todo = createTodo(inputToDo.value);
+      addElementInContainer(todo , todoListContainer)
+    }
+  }

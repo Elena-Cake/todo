@@ -25,5 +25,6 @@
 /* popup */
 @import url(../blocks/todo/__icon/_type/todo__icon_type_btn-done.css);
 @import url(../blocks/todo/__icon/_type/todo__icon_type_btn-close.css);
-@import url(../blocks/todo/__popup/todo__popup.css);
-@import url(../blocks/todo/__popup/_open/todo__popup_open.css);
+
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/_open/popup_open.css);

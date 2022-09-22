@@ -6,10 +6,19 @@ const buttonSend = document.querySelector('.main__btn-send');
 const todoListContainer = document.querySelector('.main__todo-list');
 
 // popup
-const popup = document.querySelector('.todo__popup');
+const popup = document.querySelector('.popup');
 const popupInput = popup.querySelector('.todo__text_type_inp');
 const popupDoneBtn = popup.querySelector('.todo__icon_type_btn-done');
 const popupCloseBtn = popup.querySelector('.todo__icon_type_btn-close');
+
+// открыть попап закрыть попап
+function openPopup(p) {
+  p.classList.add('popup_open');
+};
+
+function closePopup(p) {
+  p.classList.remove('popup_open');
+};
 
 
 // add todo function
@@ -19,9 +28,11 @@ function createTodo (text) {
     todoElement.querySelector('.todo__text').textContent = text;
 
     // edit
-    todoElement.querySelector('.todo__icon_type_btn-edit').addEventListener('click',() =>{
-      popup.classList.add('todo__popup_open')
-      popupInput.value = text;
+    todoElement.querySelector('.todo__icon_type_btn-edit').addEventListener('click',(event) =>{
+      editingItem = event.target.closest('.todo')
+      openPopup(popup);
+      popupInput.value = editingItem.querySelector('.todo__text').textContent;
+      popupInput.focus();
     } )
 
     // copy
@@ -62,5 +73,14 @@ function addElementInContainer(element,container) {
 
   // закрытие попапа
   popupCloseBtn.addEventListener('click', () => {
-    popup.classList.remove('todo__popup_open')
+    closePopup(popup);
   })
+
+  // изменение 
+  popupDoneBtn.addEventListener('click', submitEditHandler);
+
+  function submitEditHandler(event)  {
+    event.preventDefault();
+    editingItem.querySelector('.todo__text').textContent = popupInput.value;
+    closePopup(popup);
+  };
